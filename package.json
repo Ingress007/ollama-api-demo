@@ -1,0 +1,21 @@
+{
+  "name": "ollama-api-demo",
+  "version": "1.0.0",
+  "description": "Demo project showing how to use Ollama API with qwen3:8b model",
+  "main": "ollama_js_example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ollama",
+    "qwen3",
+    "api",
+    "llm"
+  ],
+  "author": "Developer",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ollama": "^0.6.3"
+  }
+}
