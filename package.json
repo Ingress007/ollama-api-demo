@@ -2,7 +2,7 @@
   "name": "ollama-api-demo",
   "version": "1.0.0",
   "description": "Demo project showing how to use Ollama API with qwen3:8b model",
-  "main": "ollama_js_example.js",
+  "main": "ollama_client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
