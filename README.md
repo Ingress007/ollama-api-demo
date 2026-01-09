@@ -1,35 +1,43 @@
 # Ollama API Demo
 
-This project demonstrates how to use the Ollama API to interact with local LLM models like qwen3:8b.
+本项目演示了如何使用 Python 和 JavaScript (Node.js) 调用 Ollama API 与本地 LLM 模型（如 qwen3:8b）进行交互。
 
-## Prerequisites
+项目已拆分为两个独立的子项目：
 
-1. Ollama installed on your system
-2. qwen3:8b model pulled locally (`ollama pull qwen3:8b`)
+- **JavaScript/Node.js 示例**: 位于 `js-demo/` 目录
+- **Python 示例**: 位于 `python-demo/` 目录
 
-## Installation
+请进入相应的目录查看具体的安装和使用说明。
 
-```bash
-pip install -r requirements.txt
+## 目录结构
+
+```
+ollama-api-demo/
+├── js-demo/           # JavaScript/Node.js 示例代码及依赖
+│   ├── README.md      # JS 项目说明文档
+│   ├── package.json   # JS 依赖配置
+│   └── ...
+├── python-demo/       # Python 示例代码及依赖
+│   ├── README.md      # Python 项目说明文档
+│   ├── requirements.txt # Python 依赖配置
+│   └── ...
+└── README.md          # 项目总说明
 ```
 
-## Usage
+## 快速开始
 
-### Python Examples
+### JavaScript Demo
 
-1. Run the REST API example:
-   ```bash
-   python ollama_rest_api.py
-   ```
+```bash
+cd js-demo
+npm install
+node ollama_client.js
+```
 
-2. Run the Ollama Python client example:
-   ```bash
-   python ollama_client.py
-   ```
+### Python Demo
 
-### JavaScript Example
-
-1. Run the Node.js example:
-   ```bash
-   node ollama_js_example.js
-   ```
+```bash
+cd python-demo
+pip install -r requirements.txt
+python ollama_client.py
+```
