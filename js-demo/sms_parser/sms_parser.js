@@ -10,7 +10,7 @@ ${smsContent}
 
 请提取以下字段（JSON字段名使用英文，字段值保持原始中文内容）：
 - city: 城市（如"深圳市"）
-- licensePlate: 车主车牌号（完整车牌，包含地区前缀如"BU0528"）
+- licensePlate: 车主车牌号（完整车牌，如"BU0528"）
 - violationTime: 违法时间（如"2026-02-28 21:20:18"）
 - location: 违法地点（如"平湖广场平龙路西往东"）
 - violationType: 违法行为（如"不佩戴头盔"）

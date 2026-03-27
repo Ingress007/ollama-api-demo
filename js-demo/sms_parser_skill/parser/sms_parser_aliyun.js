@@ -1,7 +1,5 @@
 require('dotenv').config();
 const OpenAI = require("openai");
-const fs = require('fs');
-const path = require('path');
 
 const openai = new OpenAI({
   apiKey: process.env.DASHSCOPE_API_KEY,
@@ -20,7 +18,7 @@ ${smsContent}
 - violationTime: 违法时间（如"2026-02-28 21:20:18"）
 - location: 违法地点（如"平湖广场平龙路西往东"）
 - violationType: 违法行为（如"不佩戴头盔"）
-- enforcementMethod: 执法方式 （如“电子抓拍”）
+- enforcementMethod: 执法方式 （如"电子抓拍"）
 - jurisdiction: 交警中队辖区（辖区+中队，如"龙岗辖区平湖中队"）
 
 重要：字段值必须保持原始中文，不要翻译成英文。请只返回JSON，不要包含其他说明文字。`;
@@ -56,7 +54,7 @@ async function parseTrafficViolationFromImage(imageBase64) {
 - violationTime: 违法时间（如"2026-02-28 21:20:18"）
 - location: 违法地点（如"平湖广场平龙路西往东"）
 - violationType: 违法行为（如"不佩戴头盔"）
-- enforcementMethod: 执法方式 （如“电子抓拍”）
+- enforcementMethod: 执法方式 （如"电子抓拍"）
 - jurisdiction: 交警中队辖区（辖区+中队，如"龙岗辖区平湖中队"）
 
 重要：字段值必须保持原始中文，不要翻译成英文。请只返回JSON，不要包含其他说明文字。`;
@@ -94,31 +92,7 @@ async function parseTrafficViolationFromImage(imageBase64) {
   }
 }
 
-async function main() {
-  const imagePath = path.join(__dirname, 'image.jpg');
-  
-  console.log('=== 电动自行车违法短信解析工具 (阿里云版) ===\n');
-  console.log('图片路径:', imagePath);
-  console.log('\n正在解析...\n');
-
-  const imageBuffer = fs.readFileSync(imagePath);
-  const imageBase64 = imageBuffer.toString('base64');
-
-  const result = await parseTrafficViolationFromImage(imageBase64);
-
-  if (result) {
-    console.log('解析结果 (JSON格式):');
-    console.log(JSON.stringify(result, null, 2));
-  } else {
-    console.log('解析失败');
-  }
-}
-
 module.exports = {
   parseTrafficViolationSms,
   parseTrafficViolationFromImage
 };
-
-if (require.main === module) {
-  main();
-}

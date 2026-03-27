@@ -1,0 +1,23 @@
+{
+  "name": "sms-parser-skill",
+  "version": "1.0.0",
+  "description": "AI-powered SMS parser for traffic violation notifications using Aliyun Qwen",
+  "main": "sms_parser_aliyun.js",
+  "scripts": {
+    "start": "node run.js"
+  },
+  "keywords": [
+    "sms",
+    "parser",
+    "traffic-violation",
+    "aliyun",
+    "qwen",
+    "ai"
+  ],
+  "author": "Developer",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "openai": "^6.33.0"
+  }
+}
